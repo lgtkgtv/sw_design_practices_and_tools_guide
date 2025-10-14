@@ -37,8 +37,4 @@ Are you building a service/API?
 **Services?**:     Add API-First    
 **OOP?**:          Add SOLID + Design Patterns  
 
-The documents in this repo will provide indepth guidance/training on these practices.
-             
-              Tools: pytest, linters, Coverity etc SAST
-    
-```
+The documents in this repo will provide indepth guidance/training on all the mentioned software development practices and the tools associated.
