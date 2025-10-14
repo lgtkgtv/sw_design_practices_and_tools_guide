@@ -1,0 +1,55 @@
+---
+- name: Complete MediaShare Deployment
+  hosts: all
+  become: yes
+  gather_facts: yes
+  
+  pre_tasks:
+    - name: Display deployment info
+      debug:
+        msg:
+          - "Deploying to: {{ inventory_hostname }}"
+          - "Cloud: {{ cloud_provider | default('unknown') }}"
+          - "Environment: {{ environment | default('development') }}"
+    
+    - name: Wait for connection
+      wait_for_connection:
+        timeout: 300
+  
+  roles:
+    - common
+    - docker
+    - fastapi_app
+  
+  post_tasks:
+    - name: Wait for Docker to stabilize after config changes
+      pause:
+        seconds: 10
+    
+    - name: Ensure FastAPI container is running
+      community.docker.docker_container:
+        name: "{{ container_name }}"
+        state: started
+      ignore_errors: yes
+    
+    - name: Wait a bit more for application to be ready
+      pause:
+        seconds: 5
+    
+    - name: Final health check
+      uri:
+        url: "http://localhost:{{ fastapi_port | default(8000) }}/health"
+        return_content: yes
+      register: health
+      retries: 12
+      delay: 5
+      until: health.status == 200
+    
+    - name: Display success message
+      debug:
+        msg:
+          - "═══════════════════════════════════════"
+          - "✅ DEPLOYMENT SUCCESSFUL!"
+          - "═══════════════════════════════════════"
+          - "🌐 http://{{ ansible_host }}:{{ fastapi_port | default(8000) }}"
+          - "📚 http://{{ ansible_host }}:{{ fastapi_port | default(8000) }}/docs"

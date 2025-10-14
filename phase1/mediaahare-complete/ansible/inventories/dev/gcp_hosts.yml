@@ -1,0 +1,19 @@
+all:
+  children:
+    gcp_instances:
+      hosts:
+        gcp_app_server:
+          ansible_host: REPLACE_WITH_TERRAFORM_OUTPUT
+          ansible_user: ubuntu
+          ansible_ssh_private_key_file: ~/.ssh/mediaahare-gcp-dev
+          cloud_provider: gcp
+          gcp_project: your-project-id
+          gcp_region: us-central1
+          gcp_zone: us-central1-a
+      vars:
+        environment: development
+        app_version: "1.0.0"
+        fastapi_port: 8000
+        container_name: fastapi_app
+        docker_image_name: mediaahare/fastapi
+        docker_image_tag: latest

@@ -1,0 +1,17 @@
+---
+app_name: mediaahare
+app_user: appuser
+app_group: appuser
+app_directory: /opt/mediaahare
+
+docker_version: "24.0"
+docker_compose_version: "2.23.0"
+
+python_version: "3.11"
+
+enable_firewall: true
+enable_health_checks: true
+health_check_interval: 30
+
+log_directory: /var/log/mediaahare
+log_retention_days: 7

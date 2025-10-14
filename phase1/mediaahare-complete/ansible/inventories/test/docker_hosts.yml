@@ -1,0 +1,35 @@
+all:
+  children:
+    docker_instances:
+      hosts:
+        docker_test_vm:
+          ansible_host: localhost
+          ansible_port: 2222
+          ansible_user: ubuntu
+          ansible_password: ubuntu
+          ansible_ssh_common_args: '-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+          ansible_become_password: ubuntu
+          
+          cloud_provider: docker-test
+          environment: testing
+          
+      vars:
+        app_name: mediaahare
+        app_user: appuser
+        app_group: appuser
+        app_directory: /opt/mediaahare
+        
+        fastapi_port: 8000
+        container_name: fastapi_app
+        app_version: "1.0.0-test"
+        
+        docker_image_name: mediaahare/fastapi
+        docker_image_tag: test
+        
+        container_memory_limit: 512m
+        container_cpu_limit: "0.5"
+        
+        enable_firewall: false
+        
+        log_directory: /var/log/mediaahare
+        log_retention_days: 7
