@@ -1,8 +1,6 @@
-Modern software development relies on battle-tested practices that solve recurring problems.   
-These practices ensure code is **secure**, **maintainable**, **testable**, and **scalable**.    
-They're not theoretical—they're pragmatic tools that save time, reduce bugs, and enable teams to move fast without breaking things.  
+# What software development practices to use in what situatiuons?
 
----
+Modern software development relies on battle-tested practices that solve recurring problems. These practices ensure code is **secure**, **maintainable**, **testable**, and **scalable**. They're not theoretical—they're pragmatic tools that save time, reduce bugs, and enable teams to move fast without breaking things.  
 
 ## Priority Order (Security/DevOps Context)
 
@@ -15,7 +13,6 @@ They're not theoretical—they're pragmatic tools that save time, reduce bugs, a
 7. **Design Patterns** ← Proven solutions - avoid reinventing wheels
 8. **Well-Architected** ← For AWS/cloud roles - infrastructure best practices
 
----
 
 ## Quick Decision Tree -- What software development practices to use in what situatiuons?
 
