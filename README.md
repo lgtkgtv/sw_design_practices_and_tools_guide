@@ -1,6 +1,6 @@
-Modern software development relies on battle-tested practices that solve recurring problems. 
-These practices ensure code is **secure**, **maintainable**, **testable**, and **scalable**.  
-They're not theoretical—they're pragmatic tools that save time, reduce bugs, and enable teams to move fast without breaking things.
+Modern software development relies on battle-tested practices that solve recurring problems.   
+These practices ensure code is **secure**, **maintainable**, **testable**, and **scalable**.    
+They're not theoretical—they're pragmatic tools that save time, reduce bugs, and enable teams to move fast without breaking things.  
 
 ---
 
