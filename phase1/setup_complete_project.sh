@@ -7,7 +7,7 @@
 
 set -e
 
-PROJECT_NAME="mediaahare-complete"
+PROJECT_NAME="mediashare-complete"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Colors
