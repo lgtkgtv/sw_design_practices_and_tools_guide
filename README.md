@@ -1,8 +1,8 @@
-````markdown
-# 🚀 What Software Development Practices to Use (and When)
+## 🚀 Which Software Development Practices Should You Use—and When?
 
 Modern software development relies on **battle-tested practices** that solve recurring problems.  
 They're not theoretical—they're **pragmatic tools** that: Save time, Reduce bugs, Enable fast, stable delivery
+
 ---
 
 ## 🔐 Priority Order (Security/DevOps Context)
@@ -53,7 +53,5 @@ Each document in this repo provides **in-depth training and guidance** on:
 * **Contextual examples** to apply each practice correctly
 
 ---
-> These practices aren't "nice-to-haves" — they're your **survival kit** in modern software development.
-> Adopt early. Use consistently. Improve continuously.
-
-```
+> These practices aren't "nice-to-haves" — they're your **survival kit** in modern software development.  
+> Adopt early. Use consistently. Improve continuously.  
